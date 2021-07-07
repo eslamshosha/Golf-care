@@ -1,22 +1,21 @@
-//This is to Open Search Box 
-$(".search-rool").click(function() {
-	// $("body").addClass("overflow")
-	$(".search .search-icon").removeClass("open-search")
-	$(".search .search-icon").addClass("close-search")
-	$(".search-box").addClass("search-open");
-	$(".overlay-box2").fadeIn(500);
-});
-
-$(".overlay-box2").click(function() {
-	$("body").removeClass("overflow")
-	$(".search .search-icon").addClass("open-search")
-	$(".search .search-icon").removeClass("close-search")
-	$(".search-box").removeClass("search-open");
-	$(".overlay-box2").fadeOut(500);
-});
-
 $(document).ready(function() {
 	new WOW().init();
+		//This is to Open Search Box 
+	$(".search-rool").click(function() {
+		// $("body").addClass("overflow")
+		$(".search .search-icon").removeClass("open-search")
+		$(".search .search-icon").addClass("close-search")
+		$(".search-box").addClass("search-open");
+		$(".overlay-box2").fadeIn(500);
+	});
+
+	$(".overlay-box2").click(function() {
+		$("body").removeClass("overflow")
+		$(".search .search-icon").addClass("open-search")
+		$(".search .search-icon").removeClass("close-search")
+		$(".search-box").removeClass("search-open");
+		$(".overlay-box2").fadeOut(500);
+	});
 
 	//phone size menu onclick
 	if ($(window).width() <= 1199) {
@@ -194,12 +193,6 @@ $(document).ready(function() {
 					dots: true,
 					loop: true
 				},
-				270: {
-					items: 2,
-					nav: false,
-					dots: true,
-					loop: true
-				},
 				480: {
 					items: 2,
 					nav: false,
@@ -228,24 +221,24 @@ $(document).ready(function() {
 			loop: true,
 			autoplay: true,
 			autoplayTimeout: 4000,
-			margin: 15,
+			margin: 0,
 			rtl: true,
 			responsiveClass: true,
 			responsive: {
 				0: {
-					items: 2,
+					items: 1,
 					nav: false,
 					dots: true,
 					loop: true
 				},
 				480: {
-					items: 2,
+					items: 1,
 					nav: false,
 					dots: true,
 					loop: true
 				},
 				720: {
-					items: 2,
+					items: 1,
 					nav: false,
 					dots: true,
 					loop: true

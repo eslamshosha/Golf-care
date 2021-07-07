@@ -22,12 +22,12 @@ body {
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #292a5e; 
+    background: #5c3385; 
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #10758f; 
+    background: #c175ab; 
   }
 
 .fixall{
@@ -47,11 +47,17 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-.header-info{
+.header-info a{
+    text-decoration: none;
     font-family: "TajawalRegular";
     font-size: 14px;
     color: #616161;
+    transition: all 0.3s ease-in-out;
 }
+.header-info a:hover{
+    color: #5c3385;
+}
+
 /*                          dropdown                            */
 .dropdown {
     position: relative;
@@ -193,7 +199,7 @@ html[dir=rtl] .nav-header li:last-of-type{
 }
 .nav-head {
     height: 38px;
-    background-color: #138aa8;
+    background-color: #5c3385;
     width: 100%;
     display: none;
     align-items: center;
@@ -350,6 +356,9 @@ html[dir=rtl] .search-bar .click-search{
 .top-header .header-icons{
     display: flex;
     align-items: center;
+}
+.dropdown .add-to{
+    cursor: pointer;
 }
 .top-header .add-to{
     display: flex;
@@ -573,7 +582,6 @@ html[dir=rtl] .image-row .image-sub:last-of-type{
     height: auto;
     transform: translate(-50%,-50%);
 }
-/*test*/
 .image-row .image-text{
     font-size: 18px;
     font-family: "TajawalMedium";
@@ -586,6 +594,45 @@ html[dir=rtl] .image-row .image-sub:last-of-type{
 .image-row .image-sub:hover .image-text{
     color: #c175ab;
 }
+.image-row .owl-dots {
+    position: absolute;
+    left: 50%;
+    bottom: -15%;
+    transform: translateX(-50%);
+    transition: all 0.4s ease-in-out;
+}
+
+.image-row button.owl-dot {
+    background-color: #000;
+    opacity: 0.5;
+    height: 8px;
+    width: 8px;
+    border-radius: 4px;
+    margin: 3px;
+    outline: 0;
+}
+.image-row button.owl-dot.active{
+    background-color: #c175ab;
+    opacity: 1;
+}
+
+.image-row button.owl-dot span {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.image-row .owl-dots .owl-dot:hover span {
+    background-color: #c175ab;
+}
+
+.image-row .owl-dots .owl-dot.active span {
+    background-color: #c175ab;
+}
+.image-row a{text-decoration: none;}
 
 
 /*                       image-grid section                    */
@@ -702,7 +749,7 @@ html[dir=rtl] .item-img-box .item-span{
 }
 
 .price-box .last-price {
-    color: #bdbdbd;
+    color: #8e8d8d;
     font-family: "TajawalRegular";
     font-size: 18px;
     text-decoration: line-through;
@@ -839,7 +886,6 @@ html[dir=rtl] .price-box .last-price {
 }
 .big-image img{
     width: 100%;
-    min-height: 140px;
     border-radius: 15px;
     object-fit: cover;
 }
@@ -874,18 +920,16 @@ html[dir=rtl] .main-brand  .item {
     direction: rtl;
 }
 
-.main-brand .item .img {
+.main-brand .item img {
     width: 100%; 
     overflow: hidden;
     margin-bottom: 30px;
-}
-
-.main-brand  .item img {
+    opacity: 0.5;
     filter: grayscale(1);
-    transition: all 0.4s ease-in-out;
+    transition: all .3s ease-in-out;
 }
-
-.main-brand  .item:hover img {
+.main-brand .item img:hover{
+    opacity: 1;
     filter: grayscale(0);
 }
 
@@ -927,7 +971,7 @@ html[dir=rtl] .main-brand  .item {
 .main-brand .owl-carousel .owl-dots {
     position: absolute;
     left: 50%;
-    bottom: -50%;
+    bottom: -15%;
     transform: translateX(-50%);
     transition: all 0.4s ease-in-out;
 }
@@ -1131,7 +1175,7 @@ html[dir=rtl] .newsletter-button i{
 }
 .social-link {
     border-radius: 50%;
-    background-color: #b3b3b3;
+    background-color: #f5f5f5;
     margin: 0 2px;
     width: 40px;
     height: 40px;
@@ -1234,18 +1278,6 @@ html[dir=rtl] .phone-link i{
 }
 /*                             footer accordion                 */
 /*                                   footer                            */
-/*                                  fixed-chat                            */
-.fixed-chat {
-    position: fixed;
-    bottom: 90px;
-    left: 30px;
-    z-index: 10;
-}
-html[dir=rtl] .fixed-chat {
-    right: 30px;
-    left: 0;
-}
-/*                                  fixed-chat                            */
 
 /*                                    media query                                    */
 /*                    menu in phone size                      */
@@ -1311,7 +1343,6 @@ html[dir=rtl] .fixed-chat {
     }
     .nav-head {
         height: 38px;
-        background-color: #292a5e;
         color: #fff;
         width: 100%;
         align-items: center;
@@ -1416,6 +1447,12 @@ html[dir=rtl] .fixed-chat {
     html[dir=rtl] .top-header .add-to:first-of-type{
         margin: 0;
     }
+    .top-header .add-to .fas{
+        margin-right: 0;
+    }    
+    html[dir=rtl] .top-header .add-to .fas{
+        margin-left: 0px;
+    }
 
     /*                    menu in phone size                      */
     /*                     main section                           */
@@ -1434,6 +1471,16 @@ html[dir=rtl] .fixed-chat {
     /*                     product slider section                           */
     .product-slider{
         margin-bottom: 85px;
+    }
+    .item-content .price-box{
+        flex-direction: column;
+        height: 50px;
+    }
+    .price-box .last-price{
+        margin: 0;
+    }
+    html[dir=rtl] .price-box .last-price{
+        margin: 0;
     }
     .product-slider .owl-carousel .owl-dots{
         bottom: -15%;
@@ -1454,10 +1501,13 @@ html[dir=rtl] .fixed-chat {
         text-align: center;
         padding: 0;
         padding-top: 15px;
+        margin: auto;
     }
+    
     html[dir=rtl] .features-box{
         padding: 0;
         padding-top: 15px;
+        margin: auto;
     }
     .features-box .features-text{
         margin: 0;
@@ -1471,6 +1521,12 @@ html[dir=rtl] .fixed-chat {
     }
     /*                          features section                          */
     /*                             footer                          */
+    .news-letter form{
+        text-align: center;
+    }
+    .news-letter h3{
+        margin-bottom: 10px;
+    }
     .nav-foot-cont{
         margin-bottom: 20px;
     }
@@ -1485,8 +1541,10 @@ html[dir=rtl] .fixed-chat {
     }
     .copy-right{
         order: 2;
+        margin-bottom: 5px;
     }
     .design-text{
+        order: 3;
         display: flex;
     }
     /*                             footer                          */
