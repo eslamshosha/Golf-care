@@ -105,13 +105,15 @@ $(document).ready(function() {
 				items: 2,
 				nav: false,
 				dots: true,
-				loop: true
+				loop: true,
+				margin: 15
 			},
 			1200: {
 				items: 4,
 				nav: true,
 				dots: false,
-				loop: true
+				loop: true,
+				margin: 30
 			}
 		}
 	});
@@ -174,6 +176,44 @@ $(document).ready(function() {
 		$(".footer-accordion").not(this).siblings('.nav-foot').css('padding-top', "0");
 	})
 
+	
+	 ////////////////add owl carsoul to class product////////////////////////////////
+
+	 if ( $(window).width() < 1199 ) {
+		$('.product-slider .col-lg-3').contents().unwrap();
+		$('.product-slider .row').contents().unwrap();
+		$(".product-slider .product-div").addClass("owl-carousel");
+		$('.product-slider .owl-carousel').owlCarousel({
+			loop: true,
+			// autoplay: true,
+			autoplayTimeout: 4000,
+			margin: 15,
+			rtl: true,
+			responsiveClass: true,
+			responsive: {
+				0: {
+					items: 2,
+					nav: false,
+					dots: true,
+					loop: true
+				},
+				480: {
+					items: 2,
+					nav: false,
+					dots: true,
+					loop: true
+				},
+				720: {
+					items: 2,
+					nav: false,
+					dots: true,
+					loop: true
+				}
+			}
+		});		
+	} else {
+		$(".features .features-div").removeClass("owl-Carousel");
+	}	
 
 		/////////add owl carsoul to class image-row/////////////////////
 

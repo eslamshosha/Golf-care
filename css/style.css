@@ -245,6 +245,7 @@ html[dir=rtl] .nav-header li:last-of-type{
 }
 
 .search .search-icon {
+    width: 18px;/*to make span fixed size for two icons search and close*/
     font-size: 18px;
     color: #B7B7B7;
     margin-right: 8px;
@@ -291,7 +292,7 @@ html[dir=rtl] .search .search-icon{
     font-family: "TajawalRegular";
     color: #000;
     outline: none;
-    border: 1px solid #000;
+    border: 1px solid #5c3385;
     transition: all 0.3s ease-in-out;
 }
 html[dir=rtl] .search-bar .search-input{
@@ -650,12 +651,23 @@ html[dir=rtl] .image-row .image-sub:last-of-type{
 .product-slider {
     margin-bottom: 125px;
 }
+/*slider two*/
 .product-slider.slider-two {
     margin-bottom: 70px;
 }
-.product-slider.slider-three {
-    margin-bottom: 85px;
+.slider-two .item-content .item-name{
+    margin-top: 20px;
 }
+.product-slider.slider-two {
+    margin-bottom: 70px;
+}
+.slider-two .item-cont{
+    margin-bottom: 70px;
+    position: relative;
+}
+
+
+/*slider-two*/
 
 .product-head {
     text-align: center;
@@ -684,6 +696,10 @@ html[dir=rtl] .item {
     overflow: hidden;
     margin-bottom: 30px;
     border-radius: 10px;
+}
+.item-img-box{
+    overflow: hidden;
+    border-radius: 15px;
 }
 
 .item-img-box .item-img {
@@ -794,7 +810,6 @@ html[dir=rtl] .price-box .last-price {
     color: #fff;
     text-align: center;
     font-size: 16px;
-    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.11);
     transition: all 0.4s ease-in-out;
 }
 
@@ -854,6 +869,9 @@ html[dir=rtl] .price-box .last-price {
 }
 .slider-three .owl-carousel{
     margin-bottom: 50px;
+}
+.slider-fourth{
+    margin-bottom: 75px;
 }
 .product-slider .slider-more {
     text-align: center;
@@ -948,7 +966,6 @@ html[dir=rtl] .main-brand  .item {
     color: #fff;
     text-align: center;
     font-size: 16px;
-    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.11);
     transition: all 0.4s ease-in-out;
 }
 
@@ -1300,8 +1317,9 @@ html[dir=rtl] .phone-link i{
         display: block;
         margin-right: 8px;
         font-size: 18px;
-        color: #B7B7B7;
+        color: #5c3385;
         transition: all 0.3s ease-in-out;
+        font-size: 24px;
         margin-inline-end: 26px;
     }
     .menu-bars:hover{
@@ -1436,6 +1454,10 @@ html[dir=rtl] .phone-link i{
     .search-box{
         left: 0;
     }
+    .search .search-icon{
+        font-size: 24px;
+        color: #5c3385;
+    }
     html[dir=rtl] .search-box {
         left: 0px;
         right: 50%;
@@ -1449,6 +1471,8 @@ html[dir=rtl] .phone-link i{
     }
     .top-header .add-to .fas{
         margin-right: 0;
+        font-size: 24px;
+        color: #5c3385;
     }    
     html[dir=rtl] .top-header .add-to .fas{
         margin-left: 0px;
@@ -1491,6 +1515,9 @@ html[dir=rtl] .phone-link i{
     .item-img-box .item-span{
         width: 65px;
         height: 22px;
+    }
+    .product-slider.slider-two .owl-carousel .owl-dots{
+        bottom: 20px;
     }
     
     /*                     product slider section                          */
